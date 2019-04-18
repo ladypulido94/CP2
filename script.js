@@ -15,12 +15,14 @@ $(document).ready(function () {
             "headers": {
                 "x-api-key": "6314d1a9-cbbd-4597-986d-934c4e60c6a6"
             }
-        }
+        };
+
+        let picture = "";
 
         $.ajax(catImg).done(function (response) {
             console.log(response);
             for (let i = 0; i < response.length; i++) {
-                let picture = response[i]["url"];
+                picture = response[i]["url"];
                 console.log(picture);
 
                 $(`<div class="carousel-item"><img id = "catPic" src="${picture}" width="50%"> </div>`).appendTo('.carousel-inner');
@@ -30,7 +32,10 @@ $(document).ready(function () {
             $('.carousel-item').first().addClass('active');
             $('.carousel-indicators > li').first().addClass('active');
 
+
         });
+
+
 
     });
 });

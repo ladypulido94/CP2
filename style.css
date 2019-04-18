@@ -3,7 +3,18 @@
     color: #748CAB;
 }
 
+#carousel {
+
+    width: 70%;
+}
 
 #catPic {
-    width: 80%;
+    width: 100%;
+    height: 40em;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#carousel li {
+    background-color: coral;
 }
